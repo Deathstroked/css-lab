@@ -1,132 +1,81 @@
-body{
-    background-color: #333333;
-    padding: 0px 20px 0px 20px;
-}
-
-header, nav, section, footer, article, aside{
-    background-color: #666666;
-    border-radius: 20px;
-    text-align: center;
-}
-
-header{
-    height: 100px;
-    margin-bottom: 25px;
-    margin-top: 10px;
-}
-
-aside, nav, section{
-    height: 470px;
-    float: left;
-    margin-bottom: 25px;
-}
-
-section{
-    padding: 0px 20px 0px 20px;
-    margin-left: 1%;
-    margin-right: 1%;
-    width: 40%;
-}
-
-aside,nav{
-    width: calc(29% - 20px);
-}
-
-section header,
-section article,
-section footer{
-  background-color: #999999;
-  padding: 10px 10px 0px 10px;
-}
-
-section header,
-section footer{
-    height: 50px;
-}
-
-section article{
-    margin-top: 10px;
-    height: 215px;
-}
-
-section footer{
-    margin-top: 150px;
-}
-
-section header{
-    margin-top: 15px;
-}
-
-footer{
-    clear: both;
-    height: 75px;
-}
-
 /*
-Exercises:
-1. Add background to the header, footer, aside and nav.
-2. Add a global font definition (at html element) with a value of 14px, using a font-family you like.
-3. Center the header and footer text.
-*/
-
-header, footer, aside, nav{
-  background-color: green;
-}
+ * 	Author: Piotr Elmanowski
+ *  Company: Frontoes.com
+ *  Distributed and described: css-workshop.com
+ *	v1.0
+ */
 
 *{
-  font-family: cursive;
-  font-size: 14px;
+   box-sizing: border-box;
 }
 
-header, footer{
-  text-align: center;
+h1{
+  color: black;
+  text-align: left;
+  font-weight: bold;
+
 }
 
-
-/* Using the new added classes figure out how to override:
-.header must have a font size of 46px
-.footer must have a font size of 10px
-.content must have a font size of 14px
-.navigation must have a font size of 12px
-.sidebar must have a font size of 10px */
-
-
-
-.header{
-    font-size: 46px;
+h2{
+  float: right;
+  color: black;
+  font-weight:normal;
+  font-style: oblique;
 }
 
-.footer{
-    font-size: 10px;
-}
+ body{
+   color: #fff;
+   font-family: 'Nunito Semibold';
+   text-align: center;
+   background-color: grey;
+ }
 
-.content{
-    font-size: 14px;
-}
+ header{
+   height: 200px;
+   background-color: darkgrey;
+ }
 
-.navigation{
-    font-size: 12px;
-}
+ #content{
+   padding-top: 20px;
+   grid-template-columns: repeat(6, 1fr);
+   grid-auto-rows: minmax(150px, auto);
+   grid-gap: 20px;
+   display: inline-grid;
+   max-width: 80%;
+   margin: 0 auto;
+ }
 
-.sidebar{
-    font-size: 10px;
-}
+ .one{
+   grid-column: 1 / 3;
+   grid-row: 1 / 3;
+   transition: all ease-in-out 300ms;
+   position: relative;
+   overflow:hidden;
+ }
 
-/*If the class attribute finishes with r (example header, footer), the background must be magenta. */
-[class$="r"] {
-    background: magenta;
-}
+ .two{
+   grid-column: 5 / 9;
+   grid-row: 1 / 3;
+ }
 
-/* If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue. */
+ .three{
+   grid-column: 3 / 5;
+   grid-row: 1 / 3;
+ }
 
-[class*="a"]:not([class$="r"]) {
-  background: blue;
-}
+ .four{
+   grid-column: 4 / 6;
+   grid-row: 3 / 5;;
+ }
 
-[class] {
-  font-weight: 900;
-}
-
-footer[style] {
-   background: green !important;
-}
+ .five{
+    grid-column: 6 / 9;
+    grid-row: 3 / 5;
+ }
+ .six{
+   grid-column:1 / 4;
+   grid-row: 3 / 5;
+ }
+ #content div{
+   border: 1 solid;
+ }
